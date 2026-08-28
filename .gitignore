@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+env/
+# Jupyter / IDE
+.ipynb_checkpoints/
+.vscode/
+.idea/
+# Logs / outputs
+logs/
+output**
+*.out
+results/
+runs/
+wandb/
+tensorboard/
+checkpoints/
+# Model / dataset artifacts
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+*.gguf
+*.arrow
+*.parquet
+# Hugging Face / cache
+.cache/
+hf_cache/
+transformers_cache/
+# System
+.DS_Store
+.d0*
+*.sh

@@ -1,0 +1,37 @@
+# configs/mquake_fomaml_config.yaml
+device: 0
+output_dir: "./outputs/qwen2.5-7b/simple_ft"
+seed: 42
+simple_ft: true
+
+# Base model settings
+model:
+  model_name: "Qwen/Qwen2.5-7B-Instruct"
+
+# --- Inner Loop: LoRA adapter for knowledge editing ---
+lora:
+  rank: 16
+  lora_alpha: 32
+  lora_dropout: 0.1
+  target_modules: ["q_proj", "k_proj","v_proj", "o_proj", "up_proj", "down_proj", "gate_proj"]
+  model_parallel: false
+
+# Data settings
+data:
+  train_data_path: "./datasets/meta-training.json"
+
+# Overall training settings
+inner_loop:
+  num_epochs: 10
+  batch_size: 1
+  lr: 1.0e-4
+  weight_decay: 0
+
+outer_loop:
+  num_epochs: 1
+  batch_size: 1
+  lr: 1.0e-5
+  weight_decay: 0
+
+evaluation:
+  output_dir: "./evaluation_results"

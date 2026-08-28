@@ -1,0 +1,7 @@
+torch
+transformers
+peft
+tqdm
+numpy
+matplotlib
+baukit @ git+https://github.com/davidbau/baukit@9d51abd51ebf29769aecc38c4cbef459b731a36e
